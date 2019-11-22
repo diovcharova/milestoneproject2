@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,500,600,700&display=swap');
+
+/* ------------------- General */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: large;
+    font-weight: 600;
+}
+
+
+
+/* ------------------- Navigation bar */
+
+.navbar {
+    margin-bottom: 0;
+    width: 100%;
+    background-color: white;
+    text-transform: uppercase;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    z-index: 1;
+}
+
+.navbar .navbar-toggler {
+    border: solid 2px;
+    border-radius: 50%;
+    border-color: #ffb3cc;
+
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 179, 204)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+
+}
+
+.navbar .navbar-toggler:hover {
+    border-color: #e5a1b7;
+}
+
+
+.navbar .navbar-brand {
+    font-weight: bolder;
+    font-size: 35px;
+    float: none;
+    display: inline-block;
+}
+
+.dropdown-menu{
+ font-weight: bolder;
+    font-size: 25px;
+border-radius: 15px;
+    
+}
+
+.dropdown-item:hover{
+    background-color: white;
+    color: #ffb3cc;
+}
+
+#navbarNavDropdown {
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    position: absolute;
+    right: 0;
+    top: 5em;
+    z-index: 1;
+    background-color: white;
+    border-radius: 15px;
+}
+
+
+/* ------------------- Containers and sections, general*/
+
+.callout-container {
+    height: 100vh;
+
+    background-color: #b3ffb3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    padding: 0;
+}
+
+
+.jumbotron {
+    border-radius: 0%;
+    background-color: transparent;
+    position: relative;
+    display: block;
+
+}
+
+
+#section1,
+#section2,
+#section3,
+#section4 {
+    display: block;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 7.5em;
+    padding-bottom: 7.5em;
+}
+
+#section5{
+    display: block;
+    position: relative;
+    padding-top: 6.5em;
+    padding-bottom: 7.5em;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+/* ------------------- Dividers */
+
+#arrowdown {
+    -webkit-animation: blinking 0.75s infinite ease-in-out;
+    -moz-animation: blinking 0.75s infinite ease-in-out;
+    -o-animation: blinking 0.75s infinite ease-in-out;
+    animation: blinking 0.75s infinite ease-in-out;
+    display: none;
+}
+
+
+@keyframes blinking {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.indent{
+    margin-bottom: 15px;
+}
+
+/* ------------------- Colors */
+
+.bg-color-pink {
+    background-color: #ffb3cc;
+}
+
+.bg-color-green {
+    background-color: #b3ffb3;
+}
+
+.color-green {
+    color: #b3ffb3;
+}
+
+.color-pink {
+    color: #ffb3cc;
+}
+
+.color-black {
+    color: black;
+}
+
+.btn-lg {
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.btn-lg:hover {
+    background-color: #e5a1b7;
+}
+
+footer div a:hover{
+    color: #ffb3cc;
+}
+
+/* ------------------- Contact */
+
+.center-form {
+    padding-top: 30px;
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+.form-control {
+    margin-bottom: 5px;
+}
+
+/* ------------------- Footer */
+
+footer {
+    position: relative;
+    font-size: large;
+}
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #444;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #ffb3cc;
+}
+
+/* ------------------- Media queries */
+
+@media(min-width: 992px) {
+   
+    #section5{
+        min-height: 75vh;
+    }
+}
+
+@media(min-width: 1025px){
+     #arrowdown{
+        display: inline-block;
+        position: absolute;
+        bottom:15px;
+    }
+}
