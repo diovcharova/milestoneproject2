@@ -118,9 +118,9 @@
 
            <div class="center-inputfield">
                 <form>
-                    <input type="text" name="target" class="form-control" id="target" placeholder="Target calories" />
-                    <input type="text" name="diet" class="form-control" id="diet" placeholder="Diet" />
-                    <input type="text" name="dislikes" class="form-control" id="dislikes" placeholder="Excluded foods" />
+                    <input type="text" name="target" class="form-control" id="target" placeholder="Target calories" autocomplete="off"/>
+                    <input type="text" name="diet" class="form-control" id="diet" placeholder="Diet" autocomplete="off"/>
+                    <input type="text" name="dislikes" class="form-control" id="dislikes" placeholder="Excluded foods" autocomplete="off"/>
                     <button type="submit" class="btn bg-color-pink center-block" onclick="fetchMealPlan(); return false;">Search</button>
                 </form>
                 <div id="mealplan" class="clearfix add-padding-top"></div>
@@ -142,7 +142,7 @@
             </div>
             <div class="center-inputfield">
                 <form>
-                    <input type="text" name="Available Ingredients" class="form-control" id="availableIngredients" placeholder="Available Ingredients" />
+                    <input type="text" name="Available Ingredients" class="form-control" id="availableIngredients" placeholder="Available Ingredients" autocomplete="off"/>
                     <button type="submit" class="btn bg-color-pink center-block" onclick="fetchRecipefromFridge(); return false;">Search</button>
                 </form>
                 <div id="recipesFromFridge" class="clearfix add-padding-top"></div>
@@ -164,9 +164,9 @@
             </div>
             <div class="center-inputfield">
                 <form>
-                    <input type="text" name="intolerances" class="form-control" id="intolerances" placeholder="Food intolerances" />
-                    <input type="text" name="dietaryReq" class="form-control" id="dietaryReq" placeholder="Dietary requirements" />
-                    <input type="text" name="cuisine" class="form-control" id="cuisine" placeholder="Cuisine" />
+                    <input type="text" name="intolerances" class="form-control" id="intolerances" placeholder="Food intolerances" autocomplete="off"/>
+                    <input type="text" name="dietaryReq" class="form-control" id="dietaryReq" placeholder="Dietary requirements"  autocomplete="off"/>
+                    <input type="text" name="cuisine" class="form-control" id="cuisine" placeholder="Cuisine" autocomplete="off"/>
                     <button type="submit" class="btn bg-color-pink center-block" onclick="fetchRecipefromReq(); return false;">Search</button>
                 </form>
                 <div id="recipesFromReq" class="clearfix add-padding-top"></div>

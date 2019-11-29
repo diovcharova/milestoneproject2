@@ -254,7 +254,7 @@ a:hover{
 
 .center-inputfield{
     margin: 0 auto;
-    max-width: 25%;
+    max-width: 75%;
 }
 
 
@@ -303,6 +303,9 @@ footer {
    
     #section5{
         min-height: 75vh;
+    }
+    .center-inputfield{
+        max-width: 25%;
     }
 }
 
