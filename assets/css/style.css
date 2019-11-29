@@ -130,9 +130,27 @@ border-radius: 15px;
     padding: 0;
 }
 
+.section-container {
+    height: 20em;
+
+    display: block;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    margin: 15px;
+}
+
+.container-section {
+    background-color: rgb(255, 255, 255, .85);
+    border-radius: 15px;
+}
+
+
+
 /* ------------------- Dividers */
 
-#arrowdown {
+.arrowdown {
     -webkit-animation: blinking 0.75s infinite ease-in-out;
     -moz-animation: blinking 0.75s infinite ease-in-out;
     -o-animation: blinking 0.75s infinite ease-in-out;
@@ -192,6 +210,54 @@ footer div a:hover{
     color: #ffb3cc;
 }
 
+a:hover{
+    color:#ffb3cc;
+}
+
+/* ------------------- Our story */
+
+
+.mealplansection {
+    background-image: url('../images/nutrients.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 15px;
+
+}
+
+.fridgesection {
+    background-image: url('../images/fridge.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.dishsection {
+    background-image: url('../images/dish.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+
+/* ------------------- Ingredient nutrients */
+
+
+.center-inputfield{
+    margin: 0 auto;
+    max-width: 25%;
+}
+
+
 /* ------------------- Contact */
 
 .center-form {
@@ -241,9 +307,15 @@ footer {
 }
 
 @media(min-width: 1025px){
-     #arrowdown{
+     .arrowdown{
         display: inline-block;
-        position: absolute;
         bottom:15px;
     }
 }
+
+/* ------------------- Other */
+
+.add-padding-top{
+    padding-top: 1em;
+}
+
