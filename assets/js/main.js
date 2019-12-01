@@ -23,7 +23,7 @@ function fetchMealPlan(event) {
   let input3 = $("#dislikes").val();
 
   if (!input1 && !input2 && !input3) {
-    $("#mealplan").html(`<h5>Please enter some requirements.</h5>`);
+    $("#mealplan").html(`<h5>Please enter at least one requirement.</h5>`);
     return;
   }
 
@@ -43,11 +43,13 @@ function fetchMealPlan(event) {
                 </li>`;
           });
 
-          return `<div class="clearfix">
+          return `<div class="clearfix text-center">
                 <h3>
                     <strong>Your daily ${input2} meal plan:</strong>
                 </h3>
-                <ul class="list-unstyled">
+                <div class="row">
+                </div>
+                    <ul class="list-unstyled">
                     ${listItemsHTML.join("\n")}
                 </ul>
                 <h5>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,500,600,700&display=swap');
 
 /* ------------------- General */
 
@@ -7,9 +7,10 @@ html {
 }
 
 body {
-    font-family: 'Amatic SC', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: large;
     font-weight: 600;
+    overflow-x: hidden;
 }
 
 
@@ -50,20 +51,20 @@ body {
 
 
 .navbar .navbar-brand {
-    font-weight: bolder;
+    font-weight: normal;
     font-size: 35px;
     float: none;
     display: inline-block;
 }
 
-.dropdown-menu{
- font-weight: bolder;
+.dropdown-menu {
+    font-weight: bolder;
     font-size: 25px;
-border-radius: 15px;
-    
+    border-radius: 15px;
+
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
     background-color: white;
     color: #ffb3cc;
 }
@@ -87,7 +88,14 @@ border-radius: 15px;
 .callout-container {
     height: 100vh;
 
-    background-color: #b3ffb3;
+    background-image: url('../images/callout.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 
     display: flex;
     align-items: center;
@@ -98,13 +106,20 @@ border-radius: 15px;
     padding: 0;
 }
 
-
 .jumbotron {
     border-radius: 0%;
     background-color: transparent;
     position: relative;
     display: block;
+}
 
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 
@@ -113,23 +128,35 @@ border-radius: 15px;
 #section3,
 #section4 {
     display: block;
-    min-height: 100vh;
     position: relative;
     padding-top: 7.5em;
     padding-bottom: 7.5em;
 }
 
-#section5{
+#section5 {
     display: block;
     position: relative;
     padding-top: 6.5em;
     padding-bottom: 7.5em;
+    
+     background-image: url('../images/contact.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 
-.container-fluid{
+.container-fluid {
     padding: 0;
 }
-
+.callout{
+margin-bottom: 0;
+padding: 32px;
+    
+}
 .section-container {
     height: 20em;
 
@@ -169,7 +196,7 @@ border-radius: 15px;
     }
 }
 
-.indent{
+.indent {
     margin-bottom: 15px;
 }
 
@@ -206,16 +233,15 @@ border-radius: 15px;
     background-color: #e5a1b7;
 }
 
-footer div a:hover{
+footer div a:hover {
     color: #ffb3cc;
 }
 
-a:hover{
-    color:#ffb3cc;
+a:hover {
+    color: #ffb3cc;
 }
 
 /* ------------------- Our story */
-
 
 .mealplansection {
     background-image: url('../images/nutrients.jpg');
@@ -251,8 +277,7 @@ a:hover{
 
 /* ------------------- Ingredient nutrients */
 
-
-.center-inputfield{
+.center-inputfield {
     margin: 0 auto;
     max-width: 75%;
 }
@@ -264,6 +289,7 @@ a:hover{
     padding-top: 30px;
     margin: 0 auto;
     max-width: 50%;
+    opacity: .85;
 }
 
 .form-control {
@@ -300,25 +326,24 @@ footer {
 /* ------------------- Media queries */
 
 @media(min-width: 992px) {
-   
-    #section5{
+
+    #section5 {
         min-height: 75vh;
     }
-    .center-inputfield{
+    .center-inputfield {
         max-width: 25%;
     }
 }
 
-@media(min-width: 1025px){
-     .arrowdown{
+@media(min-width: 1025px) {
+    .arrowdown {
         display: inline-block;
-        bottom:15px;
+        bottom: 15px;
     }
 }
 
 /* ------------------- Other */
 
-.add-padding-top{
+.add-padding-top {
     padding-top: 1em;
 }
-

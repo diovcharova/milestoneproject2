@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,7 +17,8 @@
     <script src="assets/js/main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-    <script>(function() {
+    <script>
+        (function() {
             emailjs.init("user_7cbdP5G1oGkqVdwPGh8hh");
         })();
     </script>
@@ -36,7 +36,7 @@
                 <a class="navbar-brand mx-auto " href="index.html">Health helper</a>
                 <div class="dropdown">
 
-                    <button class="navbar-toggler ml-auto icon-bar " type="button" data-toggle="dropdown" data-target="#navbarNavDropdown"  aria-expanded="false" aria-label="Toggle navigation" id="toggle-button">
+                    <button class="navbar-toggler ml-auto icon-bar " type="button" data-toggle="dropdown" data-target="#navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="toggle-button">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -56,13 +56,15 @@
 
     <!--********JUMBOTRON********-->
     <div class="container-fluid callout-container text-center">
-        <section class="callout jumbotron text-center">
+        <div class="opaque-overlay">&nbsp;</div>
+        <section class="callout jumbotron text-center container-section">
             <h3>You want eat and live healthy, <br> but need some inspiration? </h3>
             <h5>You have come to the right place!</h5>
             <a href="#section1">
                     <i class="fa fa-angle-double-down fa-3x color-pink arrowdown" ></i>
                     </a>
-        </section>
+    </div>
+    </section>
     </div>
 
     <!--********OUR STORY********-->
@@ -75,7 +77,8 @@
             </div>
             <div class="row">
                 <div class="col-md-6 offset-md-3">
-                    <p>We are commited to helping people eat healthy. We want to prove that does not have to mean eating tasteless or boring meals. We developed a website, where you can generate meal plans and find recipe inspiration. We also provide you with a 'what's in the fridge' search, for those who struggle with what to cook. </p>
+                    <p>We are commited to helping people eat healthy. We want to prove that does not have to mean eating tasteless or boring meals. We developed a website, where you can generate meal plans and find recipe inspiration. We also provide you
+                        with a 'what's in the fridge' search, for those who struggle with what to cook. </p>
                 </div>
             </div>
             <div class="row">
@@ -116,11 +119,11 @@
                 </div>
             </div>
 
-           <div class="center-inputfield">
+            <div class="center-inputfield">
                 <form>
-                    <input type="text" name="target" class="form-control" id="target" placeholder="Target calories" autocomplete="off"/>
-                    <input type="text" name="diet" class="form-control" id="diet" placeholder="Diet" autocomplete="off"/>
-                    <input type="text" name="dislikes" class="form-control" id="dislikes" placeholder="Excluded foods" autocomplete="off"/>
+                    <input type="text" name="target" class="form-control" id="target" placeholder="Target calories" autocomplete="off" />
+                    <input type="text" name="diet" class="form-control" id="diet" placeholder="Diet" autocomplete="off" />
+                    <input type="text" name="dislikes" class="form-control" id="dislikes" placeholder="Excluded foods" autocomplete="off" />
                     <button type="submit" class="btn bg-color-pink center-block" onclick="fetchMealPlan(); return false;">Search</button>
                 </form>
                 <div id="mealplan" class="clearfix add-padding-top"></div>
@@ -142,7 +145,7 @@
             </div>
             <div class="center-inputfield">
                 <form>
-                    <input type="text" name="Available Ingredients" class="form-control" id="availableIngredients" placeholder="Available Ingredients" autocomplete="off"/>
+                    <input type="text" name="Available Ingredients" class="form-control" id="availableIngredients" placeholder="Available Ingredients" autocomplete="off" />
                     <button type="submit" class="btn bg-color-pink center-block" onclick="fetchRecipefromFridge(); return false;">Search</button>
                 </form>
                 <div id="recipesFromFridge" class="clearfix add-padding-top"></div>
@@ -164,9 +167,9 @@
             </div>
             <div class="center-inputfield">
                 <form>
-                    <input type="text" name="intolerances" class="form-control" id="intolerances" placeholder="Food intolerances" autocomplete="off"/>
-                    <input type="text" name="dietaryReq" class="form-control" id="dietaryReq" placeholder="Dietary requirements"  autocomplete="off"/>
-                    <input type="text" name="cuisine" class="form-control" id="cuisine" placeholder="Cuisine" autocomplete="off"/>
+                    <input type="text" name="intolerances" class="form-control" id="intolerances" placeholder="Food intolerances" autocomplete="off" />
+                    <input type="text" name="dietaryReq" class="form-control" id="dietaryReq" placeholder="Dietary requirements" autocomplete="off" />
+                    <input type="text" name="cuisine" class="form-control" id="cuisine" placeholder="Cuisine" autocomplete="off" />
                     <button type="submit" class="btn bg-color-pink center-block" onclick="fetchRecipefromReq(); return false;">Search</button>
                 </form>
                 <div id="recipesFromReq" class="clearfix add-padding-top"></div>
@@ -179,7 +182,9 @@
 
     <!--********CONTACT FORM********-->
     <div class="container-fluid">
-        <section id="section5" class="text-center container-fluid">
+        <section id="section5" class="text-center container-fluid ">
+            <div class="opaque-overlay">&nbsp;</div>
+
             <div class="row">
                 <div class="col">
                     <h2 class="text-uppercase">Contact us</h2>
@@ -198,7 +203,7 @@
                     </div>
                 </div>
             </div>
-            </section>
+        </section>
     </div>
     <!--********FOOTER********-->
 
