@@ -1,5 +1,3 @@
-$(document).ready(function() {})
-
 function sendMail(contactForm) {
   emailjs.send("gmail", "health_helper", {
       "subject": contactForm.subject.value,
@@ -8,10 +6,10 @@ function sendMail(contactForm) {
       "message": contactForm.message.value
     })
     .then(
-      function(response) {
+      response => {
         console.log("SUCCESS", response);
       },
-      function(error) {
+      error => {
         console.log("FAILED", error);
       });
   return false;
@@ -20,9 +18,9 @@ function sendMail(contactForm) {
 function fetchMealPlan(event) {
   $("#mealplan").html("");
 
-  var input1 = $("#target").val();
-  var input2 = $("#diet").val();
-  var input3 = $("#dislikes").val();
+  let input1 = $("#target").val();
+  let input2 = $("#diet").val();
+  let input3 = $("#dislikes").val();
 
   if (!input1 && !input2 && !input3) {
     $("#mealplan").html(`<h5>Please enter some requirements.</h5>`);
@@ -30,16 +28,16 @@ function fetchMealPlan(event) {
   }
 
   fetch(`https://api.spoonacular.com/recipes/mealplans/generate?timeFrame=day&targetCalories=${input1}&diet=${input2}&exclude=${input3}&apiKey=c4df18729af3439f923864d003dc20b5`)
-    .then(function(response) {
-      response.json().then(function(data) {
+    .then(response => {
+      response.json().then(data => {
         console.log(data);
-        $("#mealplan").html(function() {
+        $("#mealplan").html(() => {
           if (data.length == 0) {
             return `<div class="clearfix ">No results found!</div>`;
           }
 
-          var listItemsHTML = data.meals.map(function(key) {
-            var index = data.meals.indexOf(key) + 1;
+          let listItemsHTML = data.meals.map(key => {
+            let index = data.meals.indexOf(key) + 1;
             return `<li>
                    <a href="https://spoonacular.com/${key.title}" target="_blank" class="text-decoration-none color-pink">Meal ${index}: ${key.title}</a>
                 </li>`;
@@ -62,7 +60,7 @@ function fetchMealPlan(event) {
         });
       });
     })
-    .catch(function(errorResponse) {
+    .catch(errorResponse => {
       console.log(errorResponse);
       $("#recipesFromReq").html(
         `<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
@@ -75,22 +73,22 @@ function fetchMealPlan(event) {
 function fetchRecipefromFridge(event) {
   $("#recipesFromFridge").html("");
 
-  var input = $("#availableIngredients").val();
+  let input = $("#availableIngredients").val();
   if (!input) {
     $("#recipesFromFridge").html(`<h5>Please enter an ingredient.</h5>`);
     return;
   }
 
   fetch(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${input}&apiKey=c4df18729af3439f923864d003dc20b5&number=5`)
-    .then(function(response) {
-      response.json().then(function(data) {
+    .then(response => {
+      response.json().then(data => {
         console.log(data);
-        $("#recipesFromFridge").html(function() {
+        $("#recipesFromFridge").html(() => {
           if (data.length == 0) {
             return `<div class="clearfix ">No recipes!</div>`;
           }
 
-          var listItemsHTML = data.map(function(key) {
+          let listItemsHTML = data.map(key => {
             return `<li>
                    <a href="https://spoonacular.com/${key.title}" target="_blank" class="text-decoration-none color-pink">${key.title}</a>
                 </li>`;
@@ -107,7 +105,7 @@ function fetchRecipefromFridge(event) {
         });
       });
     })
-    .catch(function(errorResponse) {
+    .catch(errorResponse => {
       console.log(errorResponse);
       $("#recipesFromFridge").html(
         `<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
@@ -119,9 +117,9 @@ function fetchRecipefromReq(event) {
   $("#recipesFromReq").html("");
 
 
-  var input1 = $("#intolerances").val();
-  var input2 = $("#dietaryReq").val();
-  var input3 = $("#cuisine").val();
+  let input1 = $("#intolerances").val();
+  let input2 = $("#dietaryReq").val();
+  let input3 = $("#cuisine").val();
 
   if (!input1 && !input2 && !input3) {
     $("#recipesFromReq").html(`<h5>Please enter a requirement.</h5>`);
@@ -129,15 +127,15 @@ function fetchRecipefromReq(event) {
   }
 
   fetch(`https://api.spoonacular.com/recipes/search?cuisine=${input3}&diet=${input2}&intolerances=${input1}&apiKey=c4df18729af3439f923864d003dc20b5&number=5`)
-    .then(function(response) {
-      response.json().then(function(data) {
+    .then(response => {
+      response.json().then(data => {
         console.log(data);
-        $("#recipesFromReq").html(function() {
+        $("#recipesFromReq").html(() => {
           if (data.length == 0) {
             return `<div class="clearfix ">No recipes!</div>`;
           }
 
-          var listItemsHTML = data.results.map(function(key) {
+          let listItemsHTML = data.results.map(key => {
             return `<li>
                    <a href="https://spoonacular.com/${key.title}" target="_blank" class="text-decoration-none color-pink">${key.title}</a>
                 </li>`;
@@ -154,7 +152,7 @@ function fetchRecipefromReq(event) {
         });
       });
     })
-    .catch(function(errorResponse) {
+    .catch(errorResponse => {
       console.log(errorResponse);
       $("#recipesFromReq").html(
         `<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
