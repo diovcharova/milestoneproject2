@@ -36,20 +36,24 @@ function fetchMealPlan(event) {
             return `<div class="clearfix ">No results found!</div>`;
           }
 
-          let listItemsHTML = data.meals.map(key => {
+           let listItemsHTML = data.meals.map(key => {
             let index = data.meals.indexOf(key) + 1;
-            return `<li>
-                   <a href="https://spoonacular.com/${key.title}" target="_blank" class="text-decoration-none color-pink">Meal ${index}: ${key.title}</a>
+            return `<li style="display:inline;">
+             <div class="section-container jumbotron result-column" style="background-image: url('https://spoonacular.com/recipeImages/${key.image}'); background-size: cover; border-radius:15px; width: 10em; height:15em;vertical-align: middle;">
+                    <div class="container-section">
+                        <h4 class="text-capitalize">Meal ${index}</h4>
+                   <a href="https://spoonacular.com/${key.title}" target="_blank" class="text-decoration-none color-pink">${key.title}</a>
+                    </div>
+                </div>
                 </li>`;
           });
 
-          return `<div class="clearfix text-center">
+
+          return `<div class="clearfix">
                 <h3>
-                    <strong>Your daily ${input2} meal plan:</strong>
+                    <strong>Your meal plan</strong>
                 </h3>
-                <div class="row">
-                </div>
-                    <ul class="list-unstyled">
+                <ul class="list-unstyled">
                     ${listItemsHTML.join("\n")}
                 </ul>
                 <h5>
@@ -91,8 +95,12 @@ function fetchRecipefromFridge(event) {
           }
 
           let listItemsHTML = data.map(key => {
-            return `<li>
+            return `<li style="display:inline;">
+            <div class="section-container jumbotron result-column" style="background-image: url('${key.image}'); background-size: cover; border-radius:15px; width: 10em; height:15em;vertical-align: middle;">
+                    <div class="container-section">
                    <a href="https://spoonacular.com/${key.title}" target="_blank" class="text-decoration-none color-pink">${key.title}</a>
+                    </div>
+                </div>
                 </li>`;
           });
 
@@ -138,8 +146,12 @@ function fetchRecipefromReq(event) {
           }
 
           let listItemsHTML = data.results.map(key => {
-            return `<li>
+            return `<li style="display:inline;">
+ <div class="section-container jumbotron result-column" style="background-image: url('https://spoonacular.com/recipeImages/${key.image}'); background-size: cover; border-radius:15px; width: 10em; height:15em; vertical-align: middle;">
+                    <div class="container-section">
                    <a href="https://spoonacular.com/${key.title}" target="_blank" class="text-decoration-none color-pink">${key.title}</a>
+                    </div>
+                </div>    
                 </li>`;
           });
 

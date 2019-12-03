@@ -26,6 +26,7 @@ Based on the user stories, I got a clearer idea of the required features on the 
 The header and footer give a general structure to the website. The navbar is in the form of a dropdown menu and is always collapsed. The footer consists of links to the different sections, as well as links to social media accounts. In the 'Our Story' section, there are cards with links to the three services provided, which appear horizontally on a medium to large screen. At smaller sized screens, they are displayed vertically after each other. Each section contains a form with a submit button, which, when pressed, triggers a call to the Spoonacular API. The results are displayed in the form of a list of links to recipes. The contact page is a form, which enables the user to contact the company more easily and is linked to EmailJS, which automatically sends the company an email whenever someone fills in the form. 
 
 ### Features left to implement
+In the future, more features can be added on the website. For instance, recipes can be displayed based on price of the meal, number of servings ,etc. It would have to be determined what other features the users want to see on the website. 
 
 
 ## Technologies Used
@@ -38,6 +39,7 @@ The header and footer give a general structure to the website. The navbar is in 
 
 
 ## Testing
+
 
 ## Deployment
 

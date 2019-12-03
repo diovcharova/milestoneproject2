@@ -19,13 +19,15 @@ body {
 
 .navbar {
     margin-bottom: 0;
-    width: 100%;
     background-color: white;
     text-transform: uppercase;
     text-align: center;
     position: fixed;
     left: 0;
+    right: 0;
+    padding-left: 0;
     z-index: 1;
+    width: auto;
 }
 
 .navbar .navbar-toggler {
@@ -49,19 +51,23 @@ body {
     border-color: #e5a1b7;
 }
 
+.dropdown {
+    position: relative;
+}
 
 .navbar .navbar-brand {
-    font-weight: normal;
-    font-size: 35px;
+    font-weight: bolder;
+    font-size: larger;
     float: none;
     display: inline-block;
 }
 
 .dropdown-menu {
+    position: absolute;
+    top: 100%;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: medium;
     border-radius: 15px;
-
 }
 
 .dropdown-item:hover {
@@ -74,14 +80,10 @@ body {
     -moz-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
-    position: absolute;
-    right: 0;
-    top: 5em;
     z-index: 1;
     background-color: white;
     border-radius: 15px;
 }
-
 
 /* ------------------- Containers and sections, general*/
 
@@ -137,9 +139,9 @@ body {
     display: block;
     position: relative;
     padding-top: 6.5em;
-    padding-bottom: 7.5em;
-    
-     background-image: url('../images/contact.jpg');
+    padding-bottom: 6.5em;
+
+    background-image: url('../images/contact.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     -webkit-background-size: cover;
@@ -149,14 +151,14 @@ body {
 
 }
 
-.container-fluid {
-    padding: 0;
+
+.callout {
+    margin-bottom: 0;
+    padding: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
-.callout{
-margin-bottom: 0;
-padding: 32px;
-    
-}
+
 .section-container {
     height: 20em;
 
@@ -207,7 +209,7 @@ padding: 32px;
 }
 
 .bg-color-green {
-    background-color: #b3ffb3;
+    background-color: #ccffcc;
 }
 
 .color-green {
@@ -275,13 +277,17 @@ a:hover {
 }
 
 
-/* ------------------- Ingredient nutrients */
+/* ------------------- Meal plan */
 
 .center-inputfield {
     margin: 0 auto;
     max-width: 75%;
 }
 
+.result-column {
+    display: block;
+    margin: 1em auto;
+}
 
 /* ------------------- Contact */
 
@@ -300,7 +306,7 @@ a:hover {
 
 footer {
     position: relative;
-    font-size: large;
+    font-size: medium;
 }
 
 .social-links li a i {
@@ -308,7 +314,7 @@ footer {
     height: 32px;
     padding: 12px 0;
     border-radius: 50%;
-    font-size: 13px;
+    font-size: medium;
     line-height: 7px;
     text-align: center;
     color: #444;
@@ -323,6 +329,20 @@ footer {
     background: #ffb3cc;
 }
 
+/* ------------------- Other */
+
+.add-padding-top {
+    padding-top: 1em;
+}
+
+.add-padding-bottom {
+    padding-bottom: 1em;
+}
+
+.no-padding {}
+
+
+
 /* ------------------- Media queries */
 
 @media(min-width: 992px) {
@@ -333,6 +353,14 @@ footer {
     .center-inputfield {
         max-width: 25%;
     }
+    .no-padding {
+        padding: 0;
+    }
+    .result-column {
+        display: inline-block;
+        margin: 1em;
+    }
+
 }
 
 @media(min-width: 1025px) {
@@ -340,10 +368,4 @@ footer {
         display: inline-block;
         bottom: 15px;
     }
-}
-
-/* ------------------- Other */
-
-.add-padding-top {
-    padding-top: 1em;
 }

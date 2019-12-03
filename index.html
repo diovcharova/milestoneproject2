@@ -32,11 +32,10 @@
     <!--********NAVBAR********-->
     <header class="">
         <div class="container-fluid">
-            <nav class="navbar navbar-light  ">
+            <nav class="navbar navbar-light navbar-fixed add-padding-top add-padding-bottom ">
                 <a class="navbar-brand mx-auto " href="index.html">Health helper</a>
                 <div class="dropdown">
-
-                    <button class="navbar-toggler ml-auto icon-bar " type="button" data-toggle="dropdown" data-target="#navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="toggle-button">
+                    <button class="navbar-toggler icon-bar " type="button" data-toggle="dropdown" data-target="#navbarNavDropdown" aria-expanded="false">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -68,7 +67,7 @@
     </div>
 
     <!--********OUR STORY********-->
-    <div class="container-fluid">
+    <div class="container-fluid no-padding">
         <section id="section1" class="text-center">
             <div class="row">
                 <div class="col">
@@ -93,7 +92,7 @@
                 <div class="col-md section-container jumbotron fridgesection ">
                     <div class="container-section">
                         <h4 class="text-capitalize">'What's in the fridge' search</h4>
-                        <p>Do you sometimes struggle to come up with a recipe for dinner? Maybe you have some ingredients, but you don't know how to combine them? We got your back!</p>
+                        <p>Maybe you have some ingredients, but you don't know how to combine them? We got your back!</p>
                     </div>
                     <a href="#section3" class="btn bg-color-pink center-block active indent" role="button" aria-pressed="true">See more.</a>
                 </div>
@@ -110,8 +109,8 @@
     </div>
 
     <!--********GENERATE MEAL PLAN********-->
-    <div class="container-fluid">
-        <section id="section2" class="text-center container-fluid bg-color-green">
+    <div class="container-fluid no-padding bg-color-green">
+        <section id="section2" class="text-center ">
             <div class="row">
                 <div class="col">
                     <h2 class="text-uppercase">Meal plan</h2>
@@ -126,8 +125,8 @@
                     <input type="text" name="dislikes" class="form-control" id="dislikes" placeholder="Excluded foods" autocomplete="off" />
                     <button type="submit" class="btn bg-color-pink center-block" onclick="fetchMealPlan(); return false;">Search</button>
                 </form>
-                <div id="mealplan" class="clearfix add-padding-top"></div>
             </div>
+            <div id="mealplan" class="clearfix add-padding-top"></div>
             <a href="#section3">
                     <i class="fa fa-angle-double-down fa-3x color-pink arrowdown"></i>
                     </a>
@@ -135,8 +134,8 @@
     </div>
 
     <!--********'WHAT'S IN THE FRIDGE SEARCH'********-->
-    <div class="container-fluid">
-        <section id="section3" class="text-center container-fluid">
+    <div class="container-fluid no-padding">
+        <section id="section3" class="text-center ">
             <div class="row">
                 <div class="col">
                     <h2 class="text-uppercase">'What's in the fridge' search</h2>
@@ -148,8 +147,8 @@
                     <input type="text" name="Available Ingredients" class="form-control" id="availableIngredients" placeholder="Available Ingredients" autocomplete="off" />
                     <button type="submit" class="btn bg-color-pink center-block" onclick="fetchRecipefromFridge(); return false;">Search</button>
                 </form>
-                <div id="recipesFromFridge" class="clearfix add-padding-top"></div>
             </div>
+            <div id="recipesFromFridge" class="clearfix add-padding-top"></div>
             <a href="#section4">
                     <i class="fa fa-angle-double-down fa-3x color-green arrowdown"></i>
                     </a>
@@ -157,7 +156,7 @@
     </div>
 
     <!--********DISH INPIRATION********-->
-    <div class="container-fluid bg-color-green">
+    <div class="container-fluid bg-color-green no-padding">
         <section id="section4" class="text-center">
             <div class="row">
                 <div class="col">
@@ -172,8 +171,8 @@
                     <input type="text" name="cuisine" class="form-control" id="cuisine" placeholder="Cuisine" autocomplete="off" />
                     <button type="submit" class="btn bg-color-pink center-block" onclick="fetchRecipefromReq(); return false;">Search</button>
                 </form>
-                <div id="recipesFromReq" class="clearfix add-padding-top"></div>
             </div>
+            <div id="recipesFromReq" class="clearfix add-padding-top"></div>
             <a href="#section5">
                     <i class="fa fa-angle-double-down fa-3x color-pink arrowdown"></i>
                     </a>
@@ -181,10 +180,9 @@
     </div>
 
     <!--********CONTACT FORM********-->
-    <div class="container-fluid">
-        <section id="section5" class="text-center container-fluid ">
+    <div class="container-fluid p-0">
+        <section id="section5" class="text-center">
             <div class="opaque-overlay">&nbsp;</div>
-
             <div class="row">
                 <div class="col">
                     <h2 class="text-uppercase">Contact us</h2>
