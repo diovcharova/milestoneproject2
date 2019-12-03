@@ -23,11 +23,9 @@ body {
     text-transform: uppercase;
     text-align: center;
     position: fixed;
-    left: 0;
     right: 0;
-    padding-left: 0;
     z-index: 1;
-    width: auto;
+    width: 100% !important;
 }
 
 .navbar .navbar-toggler {
@@ -44,8 +42,8 @@ body {
 
 .navbar .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 179, 204)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-
 }
+
 
 .navbar .navbar-toggler:hover {
     border-color: #e5a1b7;
@@ -109,7 +107,7 @@ body {
 }
 
 .jumbotron {
-    border-radius: 0%;
+    border-radius: 0;
     background-color: transparent;
     position: relative;
     display: block;
